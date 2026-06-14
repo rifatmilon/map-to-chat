@@ -1,0 +1,74 @@
+# ----------------------------
+# Secrets / env files
+# ----------------------------
+.env
+.env.*
+!.env.example
+
+# API keys / creds
+credentials/
+secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# ----------------------------
+# n8n (local runtime data)
+# ----------------------------
+.n8n/
+n8n/
+n8n_data/
+n8n-data/
+data/
+db/
+database/
+*.sqlite
+*.db
+*.sqlite3
+
+# ----------------------------
+# Docker
+# ----------------------------
+**/docker-compose.override.yml
+**/*.local.yml
+**/.docker/
+
+# Local bind mounts (common)
+volumes/
+volume/
+mounts/
+
+# ----------------------------
+# ngrok
+# ----------------------------
+.ngrok2/
+.ngrok/
+ngrok.yml
+ngrok.yaml
+ngrok.log
+*.ngrok.log
+
+# ----------------------------
+# Logs / temp
+# ----------------------------
+logs/
+*.log
+tmp/
+temp/
+.cache/
+
+# ----------------------------
+# OS / Editor
+# ----------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+#
+# ----------------------------
+# Workflow Files
+# ----------------------------
+*.json
