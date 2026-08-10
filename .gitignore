@@ -71,4 +71,5 @@ Thumbs.db
 # ----------------------------
 # Workflow Files
 # ----------------------------
+workflows/
 *.json
