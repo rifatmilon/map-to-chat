@@ -9,6 +9,7 @@
 [![Anthropic](https://img.shields.io/badge/AI%20Engine-Anthropic%20Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)]()
 [![Google Workspace](https://img.shields.io/badge/Ecosystem-Google%20Workspace-4285F4?style=for-the-badge&logo=google&logoColor=white)]()
 [![WhatsApp](https://img.shields.io/badge/Outreach-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)]()
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge&logo=semver&logoColor=white)](https://semver.org/)
 
 <br/>
 
@@ -22,6 +23,23 @@
 <br/>
 
 </div>
+
+---
+
+## 📑 Table of Contents
+
+- [Why MapToChat?](#-why-maptochat)
+- [Database & CRM Engine](#-database--crm-engine)
+- [Core Capabilities & Workflows](#-core-capabilities--workflows)
+  - [1. Local Search & Discovery](#1-local-search--discovery-serpapi)
+  - [2. Stealth DOM Crawling & AI Parsing](#2-stealth-dom-crawling--ai-parsing-apify--claude)
+  - [3. Human-in-the-Loop & Omnichannel Outreach](#3-human-in-the-loop--omnichannel-outreach)
+- [Outreach Delivery Examples](#-outreach-delivery-examples)
+- [Technical Stack](#️-technical-stack)
+- [Safety, Privacy & Compliance](#-safety-privacy--compliance)
+- [Getting Started](#-getting-started)
+- [License](#-license)
+- [Author](#-author)
 
 ---
 
@@ -126,33 +144,35 @@ The ultimate goal of MapToChat is highly personalized, automated contact. Here i
 ## 🚀 Getting Started
 
 ### Prerequisites
-- An active n8n instance.
-- API Keys for **SerpAPI**, **Apify**, and **Anthropic**.
-- Meta Developer account configured with the **WhatsApp Cloud API**.
-- A Google Workspace account with **Sheets** and **Gmail OAuth2** credentials configured.
+- An active [n8n](https://n8n.io/) instance.
+- API keys for [SerpAPI](https://serpapi.com/), [Apify](https://apify.com/), and [Anthropic](https://console.anthropic.com/).
+- A [Meta Developer](https://developers.facebook.com/) account with the **WhatsApp Cloud API** configured.
+- A [Google Workspace](https://workspace.google.com/) account with **Sheets** and **Gmail OAuth2** credentials configured.
 
 ### Setup & Installation
 
-**1. Get the repository from the author**
+**1. Get the project files**
 To get access to the official project files and custom Apify scripts, please contact the author ([Md. Rifat Aknda](https://github.com/rifatmilon)) directly. Once you receive the project directory, navigate into it:
 ```bash
-cd map-to-chat
+cd <your-project-directory>
 ```
 
 **2. Import the workflows into n8n**
 - Open your n8n dashboard.
 - Go to **Workflows** → **Import from File**.
-- Import all three files: `Part 1`, `Part 2`, and `Part 3`.
+- Import each `.json` workflow file included in the project directory.
 
 **3. Configure Credentials**
 Assign the following credentials in your n8n workspace:
-- `Gmail OAuth2 API`
-- `Google Sheets OAuth2 API`
-- `WhatsApp account`
-- `Anthropic account`
+- `SerpAPI` — API key
+- `Apify` — API token
+- `Anthropic API` — API key
+- `WhatsApp Cloud API` — Meta Phone Number ID & access token
+- `Google Sheets OAuth2 API` — Google Cloud OAuth2 credentials with Sheets scope
+- `Gmail OAuth2 API` — Google Cloud OAuth2 credentials with Gmail send scope
 
 **4. Prepare the CRM**
-Create a Google Sheet matching the exact schema (`store_name`, `website_domain`, `status`, `should_send_outreach`, etc.) and link it to the Google Sheets nodes in all three workflows.
+Create a Google Sheet matching the exact schema (`<store_name>`, `<website_domain>`, `<status>`, `<should_send_outreach>`, etc.) and link it to the Google Sheets nodes in all three workflows.
 
 **5. Execute Discovery**
 Trigger Part 1 to run your first SerpAPI query and watch the database populate!
@@ -174,7 +194,7 @@ This project is licensed under a **Non-Commercial & Educational License** — se
 
 **Md. Rifat Aknda**
 
-*AI/ML Engineer · AI/ML & IoT Researcher*
+*AI/ML & Automation Engineer · AI/ML & IoT Researcher*
 
 [![GitHub](https://img.shields.io/badge/GitHub-rifatmilon-181717?style=for-the-badge&logo=github)](https://github.com/rifatmilon)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Md.%20Rifat%20Aknda-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/rifatmilon/)
